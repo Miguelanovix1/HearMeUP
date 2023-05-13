@@ -1,0 +1,11 @@
+#Creamos un contexto (el nombre entre comillas es el nombre con el que accedemos desde el html)
+    contexto =  Context({"NombreAPP": NombreAPP, "Fecha": fecha})
+
+#Para poner bucles en el html (imprime una lista de python en lista de html)
+	<ul>
+	{% for i in lista%}
+	<li>{{lista}}</li>
+	{%endfor%}
+	</ul>
+
+#Para ejecutar el servidor: nos metemos en el cmd en la carpeta del proyecto y pornemos: python manage.py runserver
