@@ -1,0 +1,145 @@
+
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link type="text/css" rel="stylesheet" href='{% static "css/registro.css" %}'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        
+
+<div class="div2">
+    <h1 class="titulos hind">CONTACTO</h1>
+    <hr>
+  </div>
+  
+  
+  <br><br>
+  
+  <main>
+    <form action="https://postman-echo.com/get" method="get" class="formulario" id="formulario" >
+  
+      <!-- Usuario -->
+  
+  
+      <div class="gform" id="gform-usuario">
+        <label for="usuario" class="flabel">Usuario</label>
+        <div class="gform-in">
+          <input type="text" class="form-in" name="usuario" id="usuario" placeholder="Pepe1845">
+          <i class="validar fas fa-times"></i>
+        </div>
+        <p class="error">El nombre de usuario debe contener de 4 a 16 digitos y solo acepta numeros, letras y guión bajo.</p>
+      </div>
+  
+  
+  
+      <!-- Nombre -->
+  
+  
+      <div class="gform" id="gform-nombre">
+        <label for="nombre" class="flabel">Nombre</label>
+        <div class="gform-in">
+          <input type="text" class="form-in" name="nombre" id="nombre" placeholder="Miguel Vilanova">
+          <i class="validar fas fa-times"></i>
+        </div>
+        <p class="error">El nombre debe contener de 4 a 16 digitos y solo acepta numeros, letras y guión bajo.</p>
+      </div>
+  
+  
+  
+      <!-- Contraseña -->
+  
+  
+      <div class="gform" id="gform-contr">
+        <label for="contr" class="flabel">Contraseña</label>
+        <div class="gform-in">
+          <input type="password" class="form-in" name="contr" id="contr" placeholder="">
+          <i class="validar fas fa-times"></i>
+        </div>
+        <p class="error">La contraseña debe ser de 4 a 12 digitos</p>
+      </div>
+  
+  
+  
+      <!-- Confirmar contraseña -->
+  
+  
+      <div class="gform" id="gform-contr1">
+        <label for="contr1" class="flabel">Repetir Contraseña</label>
+        <div class="gform-in">
+          <input type="password" class="form-in" name="contr1" id="contr1" placeholder="">
+          <i class="validar fas fa-times"></i>
+        </div>
+        <p class="error">Las dos contraseñas deben ser iguales.</p>
+      </div>
+  
+  
+  
+      <!-- correo -->
+  
+  
+      <div class="gform" id="gform-correo">
+        <label for="correo" class="flabel">Correo electronico</label>
+        <div class="gform-in">
+          <input type="email" class="form-in" name="correo" id="correo" placeholder="Miguel123@gmail.com">
+          <i class="validar fas fa-times"></i>
+        </div>
+        <p class="error">El correo solo puede contener numeros, letrtas, puntos y guion bajo.</p>
+      </div>
+  
+  
+  
+  
+      <!-- telefono -->
+  
+  
+      <div class="gform" id="gform-telf">
+        <label for="telf" class="flabel">Telefono</label>
+        <div class="gform-in">
+          <input type="text" class="form-in" name="telf" id="telf" placeholder="633667546">
+          <i class="validar fas fa-times"></i>
+        </div>
+        <p class="error">El telefono no es valido.</p>
+      </div>
+  
+  
+      <!-- Terminos -->
+  
+  
+      <div class="gform" id="gterm">
+        <label class="flabel" name="terminos" id="terminos">
+          <input type="checkbox" class="fcheck" name="terminos" id="terminos">
+          He leido y acepto los terminos y condiciones de uso
+        </label>
+      </div>
+  
+  
+  
+      <div class="mensaje" id="mensaje">
+        <p><i class="fas fa-exclamation-circle"></i> Error: asegurate de rellenar todo el formulario </p>
+      </div>
+  
+  
+  
+      <!-- Enviar -->
+  
+  
+      <div class="gform btn-enviar" id="gform">
+        <button type="submit" class="btnenviar">Enviar</button>
+        <p class="exito" id="exito">El formulario ha sido enviado con exito</p>
+      </div>
+    </form>
+  </main>
+
+
+
+          <!-- JAVASCRIPT -->
+          <script src="https://kit.fontawesome.com/68eb8e24f2.js" crossorigin="anonymous"></script>
+          <script type="text/javascript" src='{% static "js/registro.js" %}'></script>
+          </body>
+          
+      </html>

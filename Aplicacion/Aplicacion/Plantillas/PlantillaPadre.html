@@ -1,11 +1,82 @@
+
+{% load static %}
 <!DOCTYPE html>
     <head>
         <title>{% block title %}{% endblock %}</title>
+        <link type="text/css" rel="stylesheet" href='{% static "css/navbar.css" %}'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+        
     </head>
+
+
+
+    <!-- HERADER -->
+  <header>
+    <nav>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <div class="logo">
+        <a href="Inicio.html"> <h3>HearMeUP</h3></a>
+      </div>
+      <ul class="nav__links">
+        <li id="navli">
+          <a id="links"  href="index.html">Inicio</a>
+        </li>
+        <li id="navli">
+          <a id="links"  href="pag/productos.html">Productos</a>
+        </li>
+        <li id="navli">
+          <a id="links"  href="pag/servicios.html">Servicios</a>
+        </li>
+        <li id="navli">
+          <a id="links" href="#">FAQ</a>
+        </li>
+
+        <ul class="redesnav">
+          <li class="noglove"> <a href="https://www.instagram.com/man3dgo/" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+          <li class="noglove"> <a href="https://twitter.com/man3dgo" target="_blank"> <i class="fab fa-twitter"></i> </a> </li>
+          <li class="noglove"> <a href="https://www.tiktok.com/@man3dgo?" target="_blank"> <i class="fab fa-tiktok"></i> </a> </li>
+          <li class="noglove"> <a href="https://www.facebook.com/Heros-Trade-110353757488444" target="_blank"> <i class="fab fa-facebook"></i> </a> </li>
+        </ul>
+
+
+
+        <li id="navli" class="glove">
+          <a id="links"><i class="fas fa-globe"></i></a>
+        </li>
+
+      </ul>
+      <ul class="redesnav__large">
+        <li> <a id="links" href="https://www.instagram.com/man3dgo/" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+        <li> <a id="links" href="https://twitter.com/man3dgo" target="_blank"> <i class="fab fa-twitter"></i> </a> </li>
+        <li> <a id="links" href="https://www.tiktok.com/@man3dgo?" target="_blank"> <i class="fab fa-tiktok"></i> </a> </li>
+        <li> <a id="links" href="https://www.facebook.com/Heros-Trade-110353757488444" target="_blank"> <i class="fab fa-facebook"></i> </a> </li>
+      </ul>
+      <div class="personal">
+
+        <a class="" href="pag/contacto.html"><button id="botonnav" type="button" name="button"><i class="fas fa-shopping-bag"></i></button></a>
+        <a class="" href="pag/login.html"><button id="botonnav" type="button" name="button"><p id="textnavbtn">Log in</p><i id="navlogin" class="fas fa-user"></i>  </button></a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
     <body>
         {% block content %}
         
         {% endblock %}
+
+        <!-- JAVASCRIPT -->
+    <script src="https://kit.fontawesome.com/68eb8e24f2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='{% static "js/animacionnav.js" %}'></script>
     </body>
     
 </html>

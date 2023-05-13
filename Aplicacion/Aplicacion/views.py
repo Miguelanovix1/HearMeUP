@@ -47,9 +47,12 @@ def inicio(request): #definimos la vista de inicio
     return render(request, "Inicio.html", {})
 
 
+def Accesounico(request): #definimos la vista de inicio
+    return render(request, "Accesounico.html", {})
 
 
-
+def Registro(request): #definimos la vista de inicio
+    return render(request, "Registro.html", {})
 
 
 

@@ -1,0 +1,182 @@
+/*--------------------------------------------------------------------------FORMULARIO----------------------------------------------------------------------------------------*/
+
+main
+{
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+}
+
+
+.formulario
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1fr es una columna por lo que tendremos 2 columnas*/
+  gap: 22px; /* espaciado */
+}
+
+.flabel
+{
+  display: block;
+  font-weight: 750;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.gform-in
+{
+  position: relative;
+}
+
+
+.form-in
+{
+  width: 100%;
+  background: #FFF;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 2s;
+}
+
+
+.form-in:focus
+{
+  border: 3px solid rgba(127, 177, 251, 1);
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(0, 247, 255, 0.12);
+}
+
+
+.error
+{
+font-size: 12px;
+margin-bottom: 0;
+display: none;
+}
+
+
+.error-active
+{
+  display: block;
+}
+
+
+.validar
+{
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+
+.fcheck
+{
+    margin-right: 10px;
+}
+
+
+.fcheck, .mensaje, .btn-enviar
+{
+  grid-column: span 2;
+}
+
+
+.mensaje
+{
+  height: 45px;
+  line-height: 45px;
+  background: rgba(255, 0, 0, 0.9);
+  padding: 0 15px;
+  border-radius: 2px;
+  display: none;
+}
+
+.mensaje p
+{
+  margin: 0;
+}
+
+
+.mensaje-activo
+{
+  display: block;
+}
+
+
+
+.btn-enviar
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnenviar
+{
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: rgba(0, 0, 0, 0.95);
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+
+.btnenviar:hover
+{
+  box-shadow: 3px 0px 30px rgba(72, 74, 74, 0.32);
+}
+
+
+.exito
+{
+  font-size: 14px;
+  color: rgba(82, 255, 0, 1);
+  display: none;
+}
+
+
+.exito-activo
+{
+  display: block;
+}
+
+
+
+.gform-correcto .validar
+{
+  color: rgba(5, 255, 0, 1);
+  opacity: 1;
+}
+
+
+
+.gform-incorrecto .flabel
+{
+  color: rgba(255, 0, 0, 1);
+}
+
+.gform-incorrecto .validar
+{
+  color: rgba(255, 0, 0, 1);
+  opacity: 1;
+}
+
+
+
+.gform-incorrecto .gform-in
+{
+  border: 3px solid #bb2929;
+}

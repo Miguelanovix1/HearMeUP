@@ -1,0 +1,160 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es-ES" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Man3Dgo</title>
+  <!-- icono -->
+  <link rel="icon" type="image/png" href="../img/icons/icononegro.svg">
+  <link type="text/css" rel="stylesheet" href='{% static "css/login.css" %}'>
+  <link type="text/css" rel="stylesheet" href='{% static "css/footer.css" %}'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+        
+
+  <!-- css fuente -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- css propio -->
+  <link rel="stylesheet" href="../css/cssnav.css">
+  <link rel="stylesheet" href="../css/maincss.css">
+  <link rel="stylesheet" href="../css/csslogin.css">
+  <link rel="stylesheet" href="../css/cssfooter.css">
+
+</head>
+<body>
+
+  
+
+  <!-- MAIN -->
+  <main>
+  <div class="logincontainer">
+    <h3 class="titulologin">Entra en tu cuenta de Man3dgo</h3>
+
+
+          <div class="loginform">
+            <form action="https://postman-echo.com/get" target="_blank" method="get" class="formulario" id="formulario" >
+
+              <!--correo-->
+              <div class="formulario__grupo" id="grupo__correo_form">
+                <div class="formulario__grupo-input">
+                  <input type="email" class="formulario__input" name="correo" id="correo">
+                  <span class="formulario__span" id="formulario__span_correo">Correo Electronico</span>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  <p class="formulario__input-error">Introduca un correo valido</p>
+                </div>
+              </div>
+
+
+              <!--contraseña-->
+              <div class="formulario__grupo" id="grupo__password_form">
+                <div class="formulario__grupo-input">
+                  <input type="password" class="formulario__input" name="password" id="password">
+                  <span class="formulario__span" id="formulario__span_password">Contraseña</span>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  <p class="formulario__input-error">La contraseña debe tener entre 8 y 16 digitos</p>
+                </div>
+              </div>
+
+
+
+
+              <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <div class="formulario__mensaje " id ="formulario__mensaje">
+                  <p class="mensajedisplayrgform">La contraseña y el correo no coinciden</p>
+                  <p class="mensajedisplayrpform">La&nbspcontraseña&nbspy el&nbspcorreo&nbspno&nbspcoinciden</p>
+                </div>
+                <button id="botonenviar" type="submit" class="formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado correctamente</p>
+              </div>
+
+
+            </form>
+          </div>
+          <div class="loginregistro">
+          <p class="registraterg">¿Aun no tienes cuenta? <a href="../pag/register.html">registrate aqui</a></p>
+          <p class="registraterp">¿Aun no tienes cuenta? <br><a href="../pag/register.html">registrate aqui</a></p>
+          </div>
+
+          </div>
+
+  </main>
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer__content">
+      <!--
+      <div class="footer__logo">
+      <h3>Man3Dgo</h3>
+    </div>
+  -->
+  <ul class="footer__links">
+
+    <li id="">
+      <a id="" href="#">Contacto & Soporte</a>
+    </li>
+    <li id="">
+      <a id=""  href="#">Inicio</a>
+    </li>
+    <li id="">
+      <a id=""  href="#">Productos</a>
+    </li>
+    <li id="">
+      <a id=""  href="#">Servicios</a>
+    </li>
+    <li id="">
+      <a id="" href="#">FAQ</a>
+    </li>
+
+  </ul>
+
+
+  <ul class="footer__products">
+
+    <h3> Favoritos</h3>
+
+    <li id="">
+      <a id=""  href="#">Trofeo</a>
+    </li>
+    <li id="">
+      <a id=""  href="#">Marco con Foto</a>
+    </li>
+    <li id="">
+      <a id=""  href="#">Llavero Spotify</a>
+    </li>
+    <li id="">
+      <a id="" href="#">Llavero de luz</a>
+    </li>
+    <li id="">
+      <a id="" href="#">Silueta</a>
+    </li>
+  </ul>
+
+
+
+
+
+</div>
+<div class="contact-rp">
+  <a id=""  href="#">Contacto & Soporte</a>
+</div>
+<ul id="redes__footer" class="redes__footer">
+  <li> <a href="https://www.instagram.com/man3dgo/" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+  <li> <a href="https://twitter.com/man3dgo" target="_blank"> <i class="fab fa-twitter"></i> </a> </li>
+  <li> <a href="https://www.tiktok.com/@man3dgo?" target="_blank"> <i class="fab fa-tiktok"></i> </a> </li>
+  <li> <a href="https://www.facebook.com/Heros-Trade-110353757488444" target="_blank"> <i class="fab fa-facebook"></i> </a> </li>
+</ul>
+
+<div class="footer__bottom">
+  <p>Copyright&copy; 2021 Man3dgo. Designed by <span>Nash</span>.</p>
+</div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="https://kit.fontawesome.com/68eb8e24f2.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src='{% static "js/login.js" %}'></script>
+<script type="text/javascript" src="../js/jslogin.js"></script>
+
+</body>
+</html>
