@@ -149,6 +149,7 @@ footer{
   }
   
   .footer__bottom p{
+    color: #ffffff;
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;

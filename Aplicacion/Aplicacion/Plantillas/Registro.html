@@ -2,51 +2,65 @@
 {% load static %}
 <!DOCTYPE html>
     <head>
-        <title>{% block title %}{% endblock %}</title>
+        <title>Registro - HearMeUP</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <link type="text/css" rel="stylesheet" href='{% static "css/footer.css" %}'>
         <link type="text/css" rel="stylesheet" href='{% static "css/registro.css" %}'>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
-        
     </head>
 
     <body>
-        
 
-<div class="div2">
-    <h1 class="titulos hind">CONTACTO</h1>
-    <hr>
-  </div>
-  
-  
-  <br><br>
-  
+
+
+
+  <div class="fondo">
+
+    <div class="div2">
+        <h1 class="titulos hind">Registro</h1>
+        <hr>
+      </div>
+      
+      
+      <br><br>
+    
+
+
   <main>
     <form action="https://postman-echo.com/get" method="get" class="formulario" id="formulario" >
-  
-      <!-- Usuario -->
-  
-  
-      <div class="gform" id="gform-usuario">
-        <label for="usuario" class="flabel">Usuario</label>
-        <div class="gform-in">
-          <input type="text" class="form-in" name="usuario" id="usuario" placeholder="Pepe1845">
-          <i class="validar fas fa-times"></i>
-        </div>
-        <p class="error">El nombre de usuario debe contener de 4 a 16 digitos y solo acepta numeros, letras y guión bajo.</p>
-      </div>
-  
-  
   
       <!-- Nombre -->
   
   
       <div class="gform" id="gform-nombre">
-        <label for="nombre" class="flabel">Nombre</label>
+        <label for="nombre" class="flabel">Nombre completo</label>
         <div class="gform-in">
-          <input type="text" class="form-in" name="nombre" id="nombre" placeholder="Miguel Vilanova">
+          <input type="text" class="form-in" name="nombre" id="nombre" placeholder="Diego Sánchez García">
           <i class="validar fas fa-times"></i>
         </div>
-        <p class="error">El nombre debe contener de 4 a 16 digitos y solo acepta numeros, letras y guión bajo.</p>
+        <p class="error">El nombre no puede estar vacío y solo puede contener letras.</p>
+      </div>
+  
+  
+  
+      <!-- correo -->
+  
+  
+      <div class="gform" id="gform-correo">
+        <label for="correo" class="flabel">Correo electronico</label>
+        <div class="gform-in">
+          <input type="email" class="form-in" name="correo" id="correo" placeholder="DiegoSanGar@gmail.com">
+          <i class="validar fas fa-times"></i>
+        </div>
+        <p class="error">El correo solo puede contener numeros, letrtas, puntos y guion bajo.</p>
       </div>
   
   
@@ -79,45 +93,42 @@
   
   
   
-      <!-- correo -->
+      <!-- Escuela -->
   
   
-      <div class="gform" id="gform-correo">
-        <label for="correo" class="flabel">Correo electronico</label>
+      <div class="gform" id="gform-nombre">
+        <label for="rol" class="flabel">Facultad</label>
         <div class="gform-in">
-          <input type="email" class="form-in" name="correo" id="correo" placeholder="Miguel123@gmail.com">
+          <select id="facultad" name="rol" class="form-in">
+            <option value="Escuela Politénica Superior">Escuela Politénica Superior</option>
+            <option value="Facultad de Ciencias de la Comunicación">Facultad de Ciencias de la Comunicación</option>
+            <option value="Facultad de Ciencias de la Salud">Facultad de Ciencias de la Salud</option>
+            <option value="Facultad de Ciencias Experimentales">Facultad de Ciencias Experimentales</option>
+            <option value="Facultad de Derecho, Empresa y Gobierno">Facultad de Derecho, Empresa y Gobierno</option>
+            <option value="Facultad de Educación y Psicología">Facultad de Educación y Psicología</option>
+            <option value="Facultad de Medicina">Facultad de Medicina</option>
+          </select>
           <i class="validar fas fa-times"></i>
         </div>
-        <p class="error">El correo solo puede contener numeros, letrtas, puntos y guion bajo.</p>
+        <p class="error">Selecciona el tipo de usuario.</p>
       </div>
-  
-  
-  
-  
-      <!-- telefono -->
-  
-  
-      <div class="gform" id="gform-telf">
-        <label for="telf" class="flabel">Telefono</label>
-        <div class="gform-in">
-          <input type="text" class="form-in" name="telf" id="telf" placeholder="633667546">
-          <i class="validar fas fa-times"></i>
-        </div>
-        <p class="error">El telefono no es valido.</p>
-      </div>
-  
-  
+
+
+
+
       <!-- Terminos -->
   
   
-      <div class="gform" id="gterm">
-        <label class="flabel" name="terminos" id="terminos">
-          <input type="checkbox" class="fcheck" name="terminos" id="terminos">
-          He leido y acepto los terminos y condiciones de uso
-        </label>
+      <div class="gform" id="gform-contr1">
+        <label for="contr1" class="flabel">Terminos y condiciones</label>
+        <div class="gform-in">
+            <label class="flabel-light" name="terminos" id="terminos">
+                <input type="checkbox" class="fcheck" name="terminos" id="terminos">
+                He leido y acepto los terminos y condiciones de uso.
+              </label>
+        </div>
       </div>
-  
-  
+      
   
       <div class="mensaje" id="mensaje">
         <p><i class="fas fa-exclamation-circle"></i> Error: asegurate de rellenar todo el formulario </p>
@@ -135,11 +146,35 @@
     </form>
   </main>
 
+  <br><br>
+
+</div>
+
+</div>
+
+
+<div class="footer__bottom">
+
+    <div class="contact-rp">
+        <a id=""  href="#">Contacto & Soporte</a>
+      </div>
+      <ul id="redes__footer" class="redes__footer">
+        <li> <a href="https://www.instagram.com/man3dgo/" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+        <li> <a href="https://twitter.com/man3dgo" target="_blank"> <i class="fab fa-twitter"></i> </a> </li>
+        <li> <a href="https://www.tiktok.com/@man3dgo?" target="_blank"> <i class="fab fa-tiktok"></i> </a> </li>
+        <li> <a href="https://www.facebook.com/Heros-Trade-110353757488444" target="_blank"> <i class="fab fa-facebook"></i> </a> </li>
+      </ul>
+
+  <p class="footer__bottom">Copyright&copy; 2023 HearMeUP. Designed by <span>Miguel Vilanova</span>.</p>
+</div>
+</footer>
+
+
 
 
           <!-- JAVASCRIPT -->
           <script src="https://kit.fontawesome.com/68eb8e24f2.js" crossorigin="anonymous"></script>
           <script type="text/javascript" src='{% static "js/registro.js" %}'></script>
-          </body>
+    </body>
           
-      </html>
+</html>
