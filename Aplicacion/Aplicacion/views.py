@@ -55,7 +55,8 @@ def Registro(request): #definimos la vista de inicio
     return render(request, "Registro.html", {})
 
 
-
+def Eventos(request): #definimos la vista de inicio
+    return render(request, "Eventos.html", {})
 
 
 

@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 #from Aplicacion.views import inicio # importamos la vista de la aplicacion
-from Aplicacion.views import PlantillaPadre, inicio, Accesounico, Registro
+from Aplicacion.views import PlantillaPadre, inicio, Accesounico, Registro, Eventos
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Inicio/', inicio),
     path('PlantillaPadre/', PlantillaPadre),
     path('Accesounico/', Accesounico),
     path('Registro/', Registro),
+    path('Eventos/', Eventos),
 
 ]

@@ -17,18 +17,7 @@ body
   font-family: "Montserrat", sans-serif;
 }
 
-@media (max-width: 1050px) {
-    .fondo {
-    background-image: url("/static/images/fondo-acceso-blur.jpg");
-    background-repeat: repeat;
-    background-size: auto;
-    }
-    .formulario
-    {
-    grid-template-columns: 1fr; /* 1fr es una columna por lo que tendremos 2 columnas*/
-    }
 
-  }
   
   
   
@@ -50,6 +39,10 @@ main
   display: grid;
   grid-template-columns: 1fr 1fr; /* 1fr es una columna por lo que tendremos 2 columnas*/
   gap: 22px; /* espaciado */
+}
+
+.gform {
+  grid-column: span 1;
 }
 
 .flabel
@@ -224,4 +217,21 @@ display: none;
 .gform-incorrecto .gform-in
 {
   border: 3px solid #bb2929;
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .fondo {
+  background-image: url("/static/images/fondo-acceso-blur.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  }
+  .formulario
+  {
+  grid-template-columns: 1fr !important; /* 1fr es una columna por lo que tendremos 2 columnas*/
+  width: 100%;
+  }
+  .gform {
+    grid-column: span 2;
+  }
 }

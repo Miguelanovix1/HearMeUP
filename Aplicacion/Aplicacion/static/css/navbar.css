@@ -1,353 +1,696 @@
+body
+{
+  background-color: rgb(247, 247, 247);
+  height: 3000px;
 
-h1 {
-  color: blue;
 }
 
+/*-------------BOTON SUBIR------------*/
 
-/*navbar*/
-
-nav{
+.go-top-container
+{
   position: fixed;
-  z-index: 1000;
-  top: 0;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  max-height: 65px;
-  background-color: #000;
-  font-family: "Montserrat", sans-serif;
-}
-
-.logo{
-  color: #fff;
-  /*text-transform: uppercase;*/
-  letter-spacing: 5px;
-  padding-left: 7vw;
-  font-size: 25px;
-}
-
-.logo a{
-  text-decoration: none;
-  color: #fff;
-}
-
-.nav__links{
-  display: flex;
-  list-style: none;
-  background-color: transparent;
-  justify-content: space-around;
-  width: 30%;
-  padding: 0 4vw;
-}
-
-
-#links{
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-}
-
-#navli {
-  padding: 9px 2vw;
-}
-
-
-
-#navli a{
-  transition: all 0.3s ease 0s;
-
-}
-
-
-#navli a:hover{
-  color: rgba(255,255,255,0.7);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-#links:hover{
-  color: rgba(255,255,255,0.7);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.burger{
-  display: none;
-  cursor: pointer;
-}
-
-.burger div{
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
-
-.noglove{
-  display: none;
-}
-
-/*redes navbar resoluciones pequeñas*/
-.redesnav{
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1rem 0 3rem 0;
-}
-
-.redesnav li{
-  margin: 0 10px;
-}
-
-.redesnav a{
-  text-decoration: none;
-  color: #fff;
-}
-
-.redesnav a i{
-  font-size: 1.1rem;
-  transition: color .4s ease;
-}
-
-.redesnav a:hover i{
-  color: rgba(255,255,255,0.7);
-  box-shadow: 0px 0px 30px rgba(255,255,255,0.3);
-}
-
-.redesnav{
-  display: none;
-}
-/*fin*/
-
-.personal{
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1rem 0 3rem 0;
-  padding-right: 7vw;
-}
-
-.personal a{
-  text-decoration: none;
-}
-
-
-#botonnav{
-  padding: 1vw;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #fff;
-  text-decoration: none;
-  outline:none;
-}
-#botonnav:hover{
-  color: rgba(255,255,255,0.7);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-
-.redesnav__large{
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  padding-left: 30vw;
-  padding-right: 30vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  background-color: #000;
-  transform: translateY(-100%);
+  bottom: 0rem;
+  right: 1rem;
+  width: 2.6rem;
+  height: 2.6rem;
   z-index: -1;
-  transition: transform 0.5s ease-in;
 }
 
-.redesnav__large li{
+.go-top-button
+{
+  width: 0rem;
+  height: 0rem;
+  background: rgba(0, 149, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*para que este en el centro de top y left que hemos puesto*/
+  z-index: -1;
+}
+
+.go-top-button i
+{
+  position: absolute;
+  font-size: 1.7rem;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /*scale * porque no queremos que al principio tenga ningun tamaño*/
+  color: white;
+  transition: 1s;
+}
+
+.show
+{
+  z-index: 10;
+}
+
+.show .go-top-button
+{
+  animation: popup .3s ease-in-out;
+  width: 2.6rem;
+  height: 2.6rem;
+  z-index: 11;
+}
+
+.show i
+{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup { /*sirve para poder ir cambiando el tamaño del icono*/
+  0%{
+    width: 0rem;
+    height: 0rem;
+  }
+  50%{
+    width: 8rem;
+    height: 8rem;
+  }
+  100%{
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+}
+
+/*--------------------------------------*/
+
+#header{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar-light .navbar-brand {
+    color: #ffffff;
+}
+
+.parallax {
+  /* ls imsghne usada */
+  background-image: url(https://www.incibe-cert.es/sites/default/files/styles/listado_315x180/public/contenidos/blog/portada3d.jpg?itok=AMxWzsmX);
+
+  /* Set a specific height */
+
+  min-height: 50vw;
+  width: 100%;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax1 {
+  /* ls imsghne usada */
+  background-image: url(https://static.wixstatic.com/media/bce2f335cdbb443a856229bf990d58ec.jpg/v1/fill/w_768,h_660,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01/bce2f335cdbb443a856229bf990d58ec.webp);
+
+  /* Set a specific height */
+
+  min-height: 50vw;
+  width: 100%;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+}
+
+
+.sombra
+{
+  border: 3px solid rgba(127, 177, 251, 1);
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(0, 247, 255, 0.12);
+}
+
+.parallax2 {
+  /* ls imsghne usada */
+  background-image: url(https://static.wixstatic.com/media/3c49a22fc25741b5822dae3a998041cf.jpg/v1/fill/w_768,h_660,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01/3c49a22fc25741b5822dae3a998041cf.webp);
+
+  /* Set a specific height */
+
+  min-height: 50vw;
+  width: 100%;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.div1
+{
+  height: auto;
+  min-height: 1px;
+  background-color: rgb(247, 247, 247);
+  padding-bottom: 40px;
+}
+
+.parallax1:hover
+{
+  height: 300px;
+  transition: height 2s;
+}
+
+.card1
+{
+  padding: 20px;
+}
+
+.div2
+{
+  background-color: white;
+  height: 30vh;
+}
+
+.div3
+{
+  background-color: white;
+  height: 92vh;
+}
+
+.top
+{
+  top: 90vh;
+}
+
+.titulos
+{
+  font-size: 7vw;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.titulopar
+{
+  text-align: center;
+  padding-top: 2vh;
+}
+
+.textop
+{
+  color: white;
+  font-size: 3vw;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #f8f9fa;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+}
+.trasp
+{
+  top: 75px;
+  display: block;
+  position: relative;
+  background-color: transparent;
+  align-items: center;
+}
+.M
+{
+  font-size: 7vw; /*proporcion del font-sze con respecto a la pantalla donde se va a visualizar*/
+  text-align: center;
+  color: White;
+}
+
+.flotard{
+  float: right;
+}
+
+.top
+{
+  vertical-align: middle;
+  display:inline-block;
+}
+.icon-text{
+  clear: left;
+  text-align: right;
+  vertical-align: middle;
+  line-height:25px;
+}
+.icon
+{
+  position: relative;
+  left: 700px;
+  top: -70px;
+  max-width: 150px;
+  max-height: 50px;
+}
+
+.logopos
+{
+  position: absolute;
+  top: 100px;
+  left: 48%;
+}
+.divr:hover
+{
+  transition: 0.25s;
+  background-color: rgba(78, 166, 158, 0.30)
+}
+
+
+/*--------------------------------------------------------------------------FORMULARIO----------------------------------------------------------------------------------------*/
+
+main
+{
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+}
+
+
+.formulario
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1fr es una columna por lo que tendremos 2 columnas*/
+  gap: 22px; /* espaciado */
+}
+
+.flabel
+{
+  display: block;
+  font-weight: 750;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.gform-in
+{
+  position: relative;
+}
+
+
+.form-in
+{
+  width: 100%;
+  background: #FFF;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 2s;
+}
+
+
+.form-in:focus
+{
+  border: 3px solid rgba(127, 177, 251, 1);
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(0, 247, 255, 0.12);
+}
+
+
+.error
+{
+font-size: 12px;
+margin-bottom: 0;
+display: none;
+}
+
+
+.error-active
+{
+  display: block;
+}
+
+
+.validar
+{
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
   opacity: 0;
 }
 
 
-#navlogin{
+.fcheck
+{
+    margin-right: 10px;
+}
+
+
+.fcheck, .mensaje, .btn-enviar
+{
+  grid-column: span 2;
+}
+
+
+.mensaje
+{
+  height: 45px;
+  line-height: 45px;
+  background: rgba(255, 0, 0, 0.9);
+  padding: 0 15px;
+  border-radius: 2px;
   display: none;
 }
-#textnavbtn{
-  white-space: nowrap;
-}
 
-/* cambios de resoluciones */
-@media screen and (max-width: 950px){
-  #navlogin{
-    display: block;
-  }
-  #textnavbtn{
-    display: none;
-  }
+.mensaje p
+{
+  margin: 0;
 }
 
 
-
-@media screen and (max-width: 900px){
-  /* no se si lo puedo quitar*/
-  /*
-  body{
-    overflow-x: hidden;
-  }
-  */
-/**/
-
-  nav{
-    max-height: 70px;
-  }
-
-  #botonnav{
-    padding: 2vw;
-  }
-
-  .redesnav__large{
-    display: none;
-  }
-
-  .redesnav__links{
-    display: none;
-  }
-
-  .nav__links{
-    position: fixed;
-    right: 0px;
-
-    top:70px;
-    height: calc(100% - 70px);
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-  .nav__links li{
-    opacity: 0;
-  }
-
-  .burger{
-    display: block;
-    padding-left: 7vw;
-  }
-
-  .redesnav{
-    display: flex;
-  }
-  .noglove{
-    display: block;
-  }
-  .glove{
-    display: none;
-  }
-
-  .logo{
-    padding-right: 0;
-  }
-  .personal{
-    padding-left: 0;
-  }
-
-}
-
-
-@media screen and (max-width:640px){
-  .nav__links{
-    width:60%;
-  }
-}
-
-
-@media screen and (max-width:500px){
-  .nav__links{
-    width:100%;
-  }
-
-
-
-}
-
-@media screen and (max-width:350px){
-  .logo{
-    font-size: 20px;
-  }
+.mensaje-activo
+{
+  display: block;
 }
 
 
 
-.nav__active{
-  transform: translateX(0%);
+.btn-enviar
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnenviar
+{
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: rgba(0, 0, 0, 0.95);
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 1s;
 }
 
 
-/*redes sociale*/
-.redesnav__active{
-  transform: translateY(0%);
+.btnenviar:hover
+{
+  box-shadow: 3px 0px 30px rgba(72, 74, 74, 0.32);
 }
 
 
-/**/
+.exito
+{
+  font-size: 14px;
+  color: rgba(82, 255, 0, 1);
+  display: none;
+}
 
-@keyframes navLinkFade{
-  from{
-    opacity: 0;
-    transform: translateX(50px);
+
+.exito-activo
+{
+  display: block;
+}
+
+
+
+.gform-correcto .validar
+{
+  color: rgba(5, 255, 0, 1);
+  opacity: 1;
+}
+
+
+
+.gform-incorrecto .flabel
+{
+  color: rgba(255, 0, 0, 1);
+}
+
+.gform-incorrecto .validar
+{
+  color: rgba(255, 0, 0, 1);
+  opacity: 1;
+}
+
+
+
+.gform-incorrecto .gform-in
+{
+  border: 3px solid #bb2929;
+}
+
+
+/*---------------------------------------------Fuentes-----------------------------------------*/
+
+.one{
+  font-family: 'Hind Madurai', sans-serif;
+  text-align: center;
+}
+
+.tam{
+  font-size: 14px;
+  text-align: center;
+}
+.tam1{
+  font-size: 7px;
+  text-align: center;
+}
+
+.hind{
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+
+.centro{
+  padding: 50px;
+  left: 10%;
+  width: 80%;
+  top: 40px;
+}
+
+.italic
+{
+  font-weight: 100;
+}
+
+.italicM
+{
+  font-weight: 350;
+}
+
+/*----------------------------Boton rojo----------------------------*/
+
+.btn_rojo
+{
+  width:20px;
+  height:20px;
+  background-color:red;
+  margin: 5px;
+  padding:10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-size:11px;
+  line-height:32px;
+  text-transform: uppercase;
+  float:left;
+  border: 1px solid #c9c9c9;
+}
+
+.btn_rojo:hover{
+  opacity: 0.50;
+  -moz-opacity: .50;
+  filter:alpha (opacity=50);
+}
+
+
+/*----------------------------Boton azul----------------------------*/
+
+.btn_azul
+{
+  width:20px;
+  height:20px;
+  background-color: rgb(0, 255, 212);
+  margin: 5px;
+  padding:10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-size:11px;
+  line-height:32px;
+  text-transform: uppercase;
+  float:left;
+  border: 1px solid #c9c9c9;
+}
+
+.btn_azul:hover{
+  opacity: 0.50;
+  -moz-opacity: .50;
+  filter:alpha (opacity=50);
+}
+
+
+/*----------------------------Boton blanco----------------------------*/
+
+.btn_blanco
+{
+  width:20px;
+  height:20px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px;
+  padding:10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-size:11px;
+  line-height:32px;
+  text-transform: uppercase;
+  float:left;
+  border: 1px solid #c9c9c9;
+}
+
+.btn_blanco:hover{
+  opacity: 0.50;
+  -moz-opacity: .50;
+  filter:alpha (opacity=50);
+}
+
+
+/*----------------------------Boton negro----------------------------*/
+
+.btn_negro
+{
+  width:20px;
+  height:20px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px;
+  padding:10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-size:11px;
+  line-height:32px;
+  text-transform: uppercase;
+  float:left;
+  border: 1px solid #c9c9c9;
+}
+
+.btn_negro:hover{
+  opacity: 0.50;
+  -moz-opacity: .50;
+  filter:alpha (opacity=50);
+}
+
+
+/*--------------parallax about---------------*/
+
+@media screen and (max-width:770px){
+  .centro{
+    left: 0;
+    width: 100%;
+    top: 0;
   }
-  to{
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-
-@keyframes redesnavLinkFade{
-  from{
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to{
-    opacity: 1;
-    transform: translateX(0px);
+  .div2
+  {
+    height: 15vh;
   }
 }
 
 
 
-.toggle .line1{
-  transform: rotate(-45deg) translate(-5px,6px);
+.parallax3 {
+  /* ls imsghne usada */
+  background-image: url(https://static.wixstatic.com/media/a2f4d892cd7547c993040ef5c47d473b.jpg/v1/fill/w_985,h_656,al_c,q_85,usm_0.66_1.00_0.01/impresora%203d.webp);
+
+  /* Set a specific height */
+
+  min-height: 50vw;
+  width: 100%;
+  height: 1600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.toggle .line2{
-  opacity: 0;
+
+.parallax4 {
+  /* ls imsghne usada */
+  background-image: url(https://static.wixstatic.com/media/b6952131692d4ba886180322b1a12184.jpg/v1/fill/w_700,h_875,al_c,q_85,usm_0.66_1.00_0.01/impresora%203d.webp);
+
+  /* Set a specific height */
+
+  min-height: 50vw;
+  width: 100%;
+  height: 1600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax5 {
+  /* ls imsghne usada */
+  background-image: url(https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2020/04/3d_printer_eac_close-up/21982695-1-eng-GB/3D_printer_EAC_close-up_pillars.jpg);
+
+  /* Set a specific height */
+
+  min-height: 50vw;
+  width: 100%;
+  height: 1600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.toggle .line3{
-  transform: rotate(45deg) translate(-5px,-6px);
+
+.parallax6 {
+  /* ls imsghne usada */
+  background-image: url(https://static.wixstatic.com/media/7d05caf9b09b49a1aef42e71bd52710c.jpg/v1/fill/w_1899,h_825,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01/7d05caf9b09b49a1aef42e71bd52710c.webp);
+
+  /* Set a specific height */
+
+  min-height: 50vw;
+  width: 100%;
+  height: 1600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.mapa
+{
+  width: 100%;
+  height: 92vh;
+}
+
+#barraaceptacion
+{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5vh;
+}
+
+.blanco
+{
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
